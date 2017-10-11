@@ -32,6 +32,17 @@ android:padding="@dimen/large_spacing">
     android:layout_height="@dimen/touch_target_size"
     android:text="@string/process"
     android:layout_marginBottom="@dimen/small_spacing" />
+
+
+<TextView
+    android:id="@+id/tv_body_2"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:text="@string/tv_output_init"
+    android:textAppearance="@style/text_title"
+    android:background="@color/colorAccent"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -52,15 +63,5 @@ android:padding="@dimen/large_spacing">
         </FrameLayout>
 
     </LinearLayout>
-
-<TextView
-    android:id="@+id/tv_body_2"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="1"
-    android:gravity="center"
-    android:text="@string/tv_output_init"
-    android:textAppearance="@style/text_title"
-    android:background="@color/colorAccent"/>
 
 </LinearLayout>

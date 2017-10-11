@@ -33,7 +33,6 @@ public class Option5Activity extends AppCompatActivity  {
     private void initView(){
         // To register click event to view
         findViewById(R.id.btn_process_5).setOnClickListener(new InnerOnClickListener());
-        findViewById(R.id.next).setOnClickListener(new InnerOnClickListener());
         findViewById(R.id.back).setOnClickListener(new InnerOnClickListener());
     }
 
@@ -45,10 +44,6 @@ public class Option5Activity extends AppCompatActivity  {
             switch (v.getId()) {
                 case R.id.btn_process_5:
                     greet();
-                    break;
-                case R.id.next:
-                    /*Intent i = new Intent(Option5Activity.this,Option4Activity.class);
-                    startActivity(i);*/
                     break;
                 case R.id.back:
                     Intent i1 = new Intent(Option5Activity.this,Option4Activity.class);
