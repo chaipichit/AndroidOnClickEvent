@@ -1,6 +1,7 @@
 package com.example.navadroid.androidonclickevent;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 // TODO: setOnClickListener to each view
-public class Option2Activity extends AppCompatActivity {
+public class Option2Activity extends AppCompatActivity{
 
     private EditText etInput;
     private TextView tvOutput;
@@ -28,6 +29,8 @@ public class Option2Activity extends AppCompatActivity {
     private void bindView(){
         etInput = (EditText) findViewById(R.id.et_input_2);
         tvOutput = (TextView) findViewById(R.id.tv_body_2);
+
+
     }
 
     // To set onClickListener to "each" view
@@ -39,6 +42,21 @@ public class Option2Activity extends AppCompatActivity {
             public void onClick(View v) {
                 greet();
                 hideKeyboardInput(v);
+            }
+        });
+
+        findViewById(R.id.next).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Option2Activity.this,Option3Activity.class);
+                startActivity(i);
+            }
+        });
+        findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Option2Activity.this,Option1Activity.class);
+                startActivity(i);
             }
         });
     }
@@ -53,5 +71,6 @@ public class Option2Activity extends AppCompatActivity {
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
     }
+
 }
 
